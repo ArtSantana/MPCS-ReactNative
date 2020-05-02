@@ -10,7 +10,7 @@ import Login from './pages/Login';
 
 
 export default function Routes() {
-  const isSigned = true;
+  const isSigned = false;
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
