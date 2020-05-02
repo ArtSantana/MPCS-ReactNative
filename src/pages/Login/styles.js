@@ -31,7 +31,7 @@ export default StyleSheet.create({
     backgroundColor: '#2c2c2e',
     width: '90%',
     height: '45%',
-    height: 360,
+    height: 380,
     borderRadius: 10,
   },
 
