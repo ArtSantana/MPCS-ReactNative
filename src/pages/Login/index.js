@@ -7,6 +7,13 @@ import styles from './styles';
 export default function Login() {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [hidePassword, setHidePassword] = useState(true);
+  const [eye, setEye] = useState('md-eye-off')
+
+  function handleEye() {
+    setHidePassword(!hidePassword);
+    hidePassword ? setEye('md-eye') : setEye('md-eye-off');
+  }
 
   return (
     <View style={styles.container}>
@@ -27,10 +34,10 @@ export default function Login() {
           <TextInput 
             placeholder="Password"
             placeholderTextColor="white"
-            secureTextEntry={true}
+            secureTextEntry={hidePassword}
             style={styles.textInputPassword}
           />
-          <Icon name="md-eye" size={20} color="white"/>
+          <Icon name={eye} size={20} color="white" onPress={handleEye}/>
         </View>
         <TouchableOpacity>
           <Text style={styles.forgotPassword}>Forgot Password</Text>
